@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3e3e3e;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    color:orange;
+    float: right;
+    padding:20px;
+    background-color: none;
+    
+}
+
+.left-number-column {
+    float: left;
+}
+
+ol {
+    counter-reset: item;
+    list-style-type: none;
+    font-size: smaller;
+    color: #9f9c9c;
+    border-right: 1px solid #9f9c9c;
+    padding-right: 15px;
+    margin-left: -25px;
+}
+
+li {
+    display: block;
+}
+
+li:before {
+    content: counter(item) "";
+    counter-increment: item;
+}
+
+
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #3e3e3e;
+    padding: 40px;
+    border-radius: 2px;
+    border-color: black;
+}
+
+
+.header-top {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 80px;
+    padding-bottom: 30px;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    float: right;
+    border-radius: 50%;
+}
+
+.header-middle h1 {
+    color: white;
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.header-title h2 {
+    color: orange;
+    font-weight: 600;
+    margin-top: -15px;
+
+    font-size: 26px;
+}
+
+h1 {
+    float: left;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    line-height: 10px;
+}
+
+.summary {
+    color: white;
+    ;
+}
+
+
+.heading {
+    color: black;
+}
+
+.job-title {
+    color: orange;
+}
+
+.company-name {
+    margin-top: 20px;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-left: 20px;
+    ;
+}
+
+.flex-item-middle {
+    text-align: left;
+    color: white;
+    padding: 20px;
+    flex: 70%;
+}
+
+.flex-item-right {
+    text-align: left;
+    color: white;
+    padding: 20px;
+    flex: 20%;
+}
+
+.flex-item-right h2 {
+    color: black;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-item-middle,
+    .header-middle,
+    .header-title,
+    .header-top {
+        width: 350px;
+    }
+
+    .black {
+        color: black;
+    }
+
+    img {
+        margin-right: 70px;
+    }
+}
